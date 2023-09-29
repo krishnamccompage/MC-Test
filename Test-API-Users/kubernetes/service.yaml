@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: test-api-users
+  labels:
+    app: test-api-users
+  name: test-api-users
+spec:
+  ports:
+  
+    - protocol: TCP
+      port: 9001
+      targetPort: 9001
+   
+   
+  selector:
+    app: test-api-users
+  type: ClusterIP
